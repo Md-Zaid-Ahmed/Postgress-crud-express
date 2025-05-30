@@ -4,6 +4,10 @@ import dotenv from "dotenv"
 
 import pool from "./config/db.js";
 
+import userRoutes from "./routes/userRoutes.js"
+import errorHandler from "./middlewares/errorHandler.js";
+import createUserTable from "./data/createUserTable.js";
+
 dotenv.config();
 
 const app = express();
@@ -14,9 +18,15 @@ app.use(express.json());
 app.use(cors());
 
 //Routes 
+app.use("/api",userRoutes);
 
 //Error Handling MiddleWare
+app.use(errorHandler);
 
+
+//creating user table 
+
+createUserTable();
 //Server Running 
 
 //TESTING DB
