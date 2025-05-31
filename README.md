@@ -23,6 +23,31 @@ To run the project with Docker and PostgreSQL, follow the setup guide:
 🔗 [Docker Setup Guide](https://medium.com/@basit26374/how-to-run-postgresql-in-docker-container-with-volume-bound-c141f94e4c5a)
 
 ---
+## 📁 Folder Structure 
+
+```
+└── 📦 node_modules
+└── 📁src
+    └── 📁config
+        └── db.js
+    └── 📁controllers
+        └── userController.js
+    └── 📁data
+        └── createUserTable.js
+        └── 📄 data.sql
+    └── 📁middlewares
+        └── errorHandler.js
+    └── 📁models
+        └── userModel.js
+    └── 📁routes
+        └── userRoutes.js
+    └── index.js
+└── 📝 .env
+└── 📝 .gitignore
+└── 📦 package-lock.json
+└── 📦 package.json
+```
+---
 
 ## 📡 API Endpoints
 
@@ -133,3 +158,5 @@ To run the project with Docker and PostgreSQL, follow the setup guide:
   }
 }
 ```
+## ❕ Note
+This README serves as a reference for clean, modular folder structure and base CRUD operations for future development.
